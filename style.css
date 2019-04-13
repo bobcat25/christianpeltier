@@ -1,0 +1,391 @@
+/*----------------------------------------------------------------general---------------------------------------------------------------------------------*/
+/* voir la position des balises bloc */
+h1,p
+{
+	border: 2px solid blue;
+}
+/* voir la position des balises inline */
+strong,a
+{
+	border: 2px dotted red;
+}
+
+html,body
+{
+	color: black;
+	background-color: white;
+	text-align: left;
+	overflow-x: hidden;
+}
+
+h1
+{
+	font-weight: bold;	
+}
+section:target
+{
+	color:red;
+	border:2px solid blue;
+	padding-top: 115px;
+
+}
+#auteur, #galerie, #contact
+{
+	padding-top: 115px;
+	padding-bottom: 5px;
+}
+/*.container 
+{
+  padding-right: auto;
+  padding-left: auto;
+  margin-right: auto;
+  margin-left: auto;	
+}
+
+@media (min-width: 768px) {
+
+  .container {
+
+    width: 750px;
+
+  }
+}
+
+@media (min-width: 992px) {
+
+  .container {
+
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .container {
+
+    width: 1170px;
+  }
+}
+*/
+/*--------------------------------------------------------------------------------------carroussel--------------------------------------------------------------------------------*/
+
+#carousel
+{
+	
+	/*position: relative; /*pour abaisser le carousel */
+	/*top: 50px;	*/
+	margin-top:150px; /* hauteur par rapport au header */
+	width:100%;
+	height: 100%;
+	/*margin-right: auto;
+	margin-left: auto;
+	padding-right: auto;
+	padding-left: auto;*/
+	padding-bottom: 10px;
+	border: 2px solid yellow;
+	/*z-index: 100000006;*/
+}
+.carousel-inner 
+{	
+    
+
+    /*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);*/
+}
+
+/* ------------------------------------------------------------------------------------------------------menu hamburger ----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------menu top-----------------------------------------------------------------------------------------*/
+header
+{
+	position: fixed;/* header toujours visible */
+	/*top: 0px;
+	left: 0px;*/
+	width: 100%;/* largeur sur tout l'écran */
+	height: 110px;/* hauteur de 110 pixels de l'écran */
+	background-color: #92F22A;
+	z-index: 10000;/*menu toujours visible*/
+
+}
+
+/*.menuTop
+{
+	position: fixed;
+	/*height: 10px;*//*
+}*/
+
+ul
+{
+	/*padding: 0;
+	margin: 0;
+	/*padding-top: 1%;
+	padding-right: 5%;*/
+	list-style-type: none;/* on annule la puce par défaut */
+	/*width: 100%;
+	height: 50px;*/
+}
+/*
+li
+{
+	/*margin-left: 0;
+	padding-left: 0;
+	float: right;*//*
+}
+*/
+ul li a
+{
+	
+	float: right;/* position du menu sur la droite */
+	margin-top: 2%;/*
+	margin-bottom: auto;*/
+
+	margin-left: 4%;/* marge gauche pour espacer le menu */
+	/*width: 100%;
+	background-color: #ffffff;*/
+	color: black;
+	font-size: large; /* grosseur de la police du menu */
+	/*text-decoration: none;
+	/*text-align: center;
+	padding: 5%;/* marge intérieure entre les onglets du menu */
+	display: block;
+}
+
+ul li a:hover
+{
+	text-decoration: none;
+	color:black;
+	border-bottom: 5px solid #ffffff;
+	transition: all 0.3s ease; 
+	font-weight: bold;	
+}
+
+
+
+.menuGauche /* logo christian peltier en haut à gauche sur menu */
+{
+	float: left; /* position du logo sur la gauche */
+	margin-top: 2%;
+	font-weight: bold;
+	/*margin-left: 15px;*/
+	/*border: 2px dotted green;*/
+}
+/*-------------------------------------------------------------------menu icone ---------------------------------------------------------------------------------------*/
+header .icon
+{
+	position: fixed;
+	display: none;
+	top: 10px;
+	right: 30px;
+	width: 10px;
+	height: 100%;	
+}
+
+header .icon button
+{
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+	margin-top: 5px;
+	background-color: #92F22A;
+	border-radius: 10px;
+	font-size: 3em;	
+}
+
+.iconeTitre
+{
+	display: none;
+	float: left;
+	font-size: 1.6em;
+	font-weight: bold;
+	margin-left: 70px;
+	margin-top: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+	header .icon 
+	{display: block;}
+	header .menuTop, .iconeTitre
+	{display: none;}
+	#carousel
+	{padding-top: 6%;}
+	.imageGalerie 
+	{margin-left: auto;
+		margin-right: auto;}
+	header .iconeTitre
+ 	{display: block;}
+}
+
+.menu
+{
+	transition: all 0.3s ease;
+	position: absolute;
+	top: 0px;
+	right: -350px;
+	height: 100%;
+	width: 350px;
+	background: white;
+	z-index: 11;
+}
+
+.active
+{	
+	right: 0px;
+	transition: all 0.3s ease;
+}
+
+.menu a
+{
+	text-decoration: none;
+	color: black;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	padding: 30px 0px;
+	font-weight: bold;
+	font-size: 1.9em;
+	
+	background: #ffffff; 
+	z-index: 20;
+}
+
+.menu a:hover
+{
+	margin-left:80px; 
+	margin-right:10px;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	color:black;
+	border-bottom: 4px solid #92F22A;	
+}
+
+.menuTitre 
+{
+	background-image: url("../image/carousel1.png");
+	width: 100%;	
+}
+
+.comble
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;/* mettre la hauteur de tout le site */
+	right: 250px;
+	z-index: 12;
+}
+
+.menuTitre
+{
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	height: 10%;
+	padding-top: 5%;
+
+}
+
+@media only screen and (max-width: 1200px) {
+	 .imageGalerie, .container .row .titreGalerie, .container .row .texteGalerie 
+	{margin-left: auto;
+		margin-right: auto;}
+}
+
+/*-------------------------------------------------------------------texte titre--------------------------------------------*/
+
+
+
+/*-----------------------------------------------------titreGalerie,Auteur,Contact---------------------------*/
+
+.titreGalerie, .titreAuteur, .titreContact
+{
+	border-bottom: 4px solid #92F22A; 	
+}
+
+.imageGalerie, .imageAuteur
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: right;
+}
+
+.texteGalerie
+{
+	text-align:left;
+}
+
+.titreAuteur
+{
+
+	padding-top: auto;
+}
+
+.titreGalerie, .texte
+{
+	text-align: left;
+}
+
+.titreGalerie,#auteur h1, #contact h1
+{
+	color: #92F22A;
+}
+
+#titre
+{
+	width: 100%;
+	
+	margin-top: 10%;
+}
+/*-------------------------------------------------formulaire-----------------------------------------------*/
+#labelNom 
+{
+	padding-top: 20px;
+}
+
+.form-control:hover
+{
+	border-color: #92F22A;
+}
+
+.telephone img
+{
+	
+	width: 20px;
+	height: 30px;
+}
+
+.email img
+{
+	
+	width: 30px;
+	height: 30px;
+}
+
+.facebookVert, .instagramVert, .twitterVert, .googlePlusVert
+{
+	width: 40px;
+	height: 40px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+#envoyer
+{
+	background-color: #92F22A;
+	border-radius: 50px;
+}
+
+
+
+/*---------------------------------------------------------------------footer-----------------------------------------*/
+#footer
+{
+	background-color: #92F22A;
+	text-align: center;
+}
+
+.facebook , .instagram, .twitter, .googlePlus
+{
+	width: 40px;
+	height: 40px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
